@@ -2,4 +2,5 @@
 
 - Redux Toolkit
 - React Router
+- Axios
 - Tailwind
