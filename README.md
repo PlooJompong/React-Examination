@@ -26,16 +26,16 @@
 
 ### Lokal statehantering
 
-- DONE -Använd useState-hooken för att hantera lokal state i minst en komponent i din webbapp. Till exempel kan du använda den för att skapa ett interaktivt kontaktformulär eller en annan interaktiv sektion.
+- DONE - Använd useState-hooken för att hantera lokal state i minst en komponent i din webbapp. Till exempel kan du använda den för att skapa ett interaktivt kontaktformulär eller en annan interaktiv sektion.
 
 ### Global statehantering
 
-- TODO -Använd ett externt bibliotek som Redux eller Zustand för global statehantering. Detta kan vara för att hantera användarpreferenser (som tema eller layout) eller för att lagra och hantera data som används av flera komponenter.
+- TODO - Använd ett externt bibliotek som Redux eller Zustand för global statehantering. Detta kan vara för att hantera användarpreferenser (som tema eller layout) eller för att lagra och hantera data som används av flera komponenter.
 
 ### Kodstandard och Dokumentation
 
-- Skriv ren och välorganiserad kod. Kommentera koden där det är nödvändigt för att förklara komplexa eller viktiga delar.
-- Inkludera en README-fil som beskriver projektet, hur man kör det och en översikt av dess funktioner.
+- TODO - Skriv ren och välorganiserad kod. Kommentera koden där det är nödvändigt för att förklara komplexa eller viktiga delar.
+- TODO - Inkludera en README-fil som beskriver projektet, hur man kör det och en översikt av dess funktioner.
 
 ### Interagera med ett API
 
@@ -50,5 +50,5 @@
 ### För Väl Godkänt
 
 - Uppgiften uppfyller kraven för godkänt.
-- Du skall välja ut 2 stycken React Hooks alt. 2 externa bibliotek/paket (eller en av varje) som vi inte gått igenom under kursen som du läser på om och implementerar i din applikation. Utöver detta så beskriver du kortfattat i din README.md-fil hur dessa hooks/bibliotek fungerar samt varför du tycker att de passar just din applikation.
-- Du ska ha en god struktur på din applikation med uppdelning i Pages och Komponenter.
+- DONE - Du skall välja ut 2 stycken React Hooks alt. 2 externa bibliotek/paket (eller en av varje) som vi inte gått igenom under kursen som du läser på om och implementerar i din applikation. Utöver detta så beskriver du kortfattat i din README.md-fil hur dessa hooks/bibliotek fungerar samt varför du tycker att de passar just din applikation.
+- DONE - Du ska ha en god struktur på din applikation med uppdelning i Pages och Komponenter.

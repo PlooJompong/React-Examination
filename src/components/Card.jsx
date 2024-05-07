@@ -2,18 +2,24 @@ const Card = ({ repos }) => {
   return (
     <section className="flex flex-wrap items-start justify-around gap-5">
       {repos.map((repo) => (
-        <div
-          key={repo.id}
-          className="flex min-h-80 w-1/4 flex-col  items-center justify-center rounded-lg border-2 bg-white"
-        >
-          {/* TODO: Adjust card img width */}
-          <div className="mt-4 h-52 w-96 bg-slate-500 md:w-32 lg:w-80"></div>
-          <h2 className="m-4 text-xl">{repo.name}</h2>
-          <button className="mb-4 rounded bg-blue-400 px-4 py-2 font-bold text-white hover:bg-blue-700">
+        <div key={repo.id} className="card w-96 bg-white shadow-xl">
+          <figure>
+            <img
+              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+              alt="Shoes"
+            />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">{repo.name}</h2>
+            <p>{repo.description}</p>
             <a href={repo.html_url} target="_blank">
-              Link
+              <button className="btn btn-primary">GO TO GITHUB</button>
             </a>
-          </button>
+            {/* <div className="card-actions justify-end">
+              <div className="badge badge-secondary">NEW</div>
+              <div className="badge badge-outline">Products</div>
+            </div> */}
+          </div>
         </div>
       ))}
     </section>

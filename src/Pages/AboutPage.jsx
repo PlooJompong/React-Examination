@@ -4,14 +4,14 @@ import Navbar from '../components/Navbar.jsx';
 import MainContainer from '../components/MainContainer.jsx';
 import Footer from '../components/Footer.jsx';
 
-const AboutMePage = () => {
+const AboutPage = () => {
   return (
     <>
       <Navbar />
       <MainContainer>
         <section className="hero-content mb-60 flex-col items-start gap-6">
           <h1 className="mb-8 font-fira text-lg 2xl:text-xl ">
-            Hi, my name is{' '}
+            Hi, my name is
           </h1>
           <h2 className="text-5xl font-semibold lg:text-7xl">Ploo Jompong</h2>
 
@@ -50,4 +50,4 @@ const AboutMePage = () => {
   );
 };
 
-export default AboutMePage;
+export default AboutPage;
