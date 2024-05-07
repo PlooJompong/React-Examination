@@ -1,15 +1,15 @@
 const Card = ({ repos }) => {
   return (
-    <section className="flex justify-around items-start flex-wrap gap-5">
+    <section className="flex flex-wrap items-start justify-around gap-5">
       {repos.map((repo) => (
         <div
           key={repo.id}
-          className="w-1/4 min-h-80 flex flex-col  justify-center items-center rounded-lg border-2 bg-white"
+          className="flex min-h-80 w-1/4 flex-col  items-center justify-center rounded-lg border-2 bg-white"
         >
           {/* TODO: Adjust card img width */}
-          <div className="w-96 h-52 mt-4 bg-slate-500 md:w-32 lg:w-80"></div>
+          <div className="mt-4 h-52 w-96 bg-slate-500 md:w-32 lg:w-80"></div>
           <h2 className="m-4 text-xl">{repo.name}</h2>
-          <button className="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 mb-4 rounded">
+          <button className="mb-4 rounded bg-blue-400 px-4 py-2 font-bold text-white hover:bg-blue-700">
             <a href={repo.html_url} target="_blank">
               Link
             </a>

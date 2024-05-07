@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import MainContainer from '../components/MainContainer.jsx';
 import Navbar from '../components/Navbar.jsx';
 import Card from '../components/Card.jsx';
+import Footer from '../components/Footer.jsx';
 
 // Array of Repos that I want to display
 const repoNamesToDisplay = [
@@ -24,7 +25,7 @@ const ProjectsPage = () => {
 
       // Filter repos to display based on repoNamesToDisplay
       const filteredRepos = localData.filter((repo) =>
-        repoNamesToDisplay.includes(repo.name)
+        repoNamesToDisplay.includes(repo.name),
       );
 
       // Sort repos based on repoNamesToDisplay order
@@ -44,13 +45,13 @@ const ProjectsPage = () => {
 
           // Filter repos to display based on repoNamesToDisplay
           const filteredRepos = data.filter((repo) =>
-            repoNamesToDisplay.includes(repo.name)
+            repoNamesToDisplay.includes(repo.name),
           );
 
           // Sort repos based on repoNamesToDisplay order
           const sortedRepos = repoNamesToDisplay
             .map((repoName) =>
-              filteredRepos.find((repo) => repo.name === repoName)
+              filteredRepos.find((repo) => repo.name === repoName),
             )
             .filter((repo) => repo);
 
@@ -67,9 +68,10 @@ const ProjectsPage = () => {
     <>
       <Navbar />
       <MainContainer>
-        <h1 className="text-3xl text-center">My Project</h1>
+        <h1 className="text-center text-3xl">My Project</h1>
         <Card repos={repos} />
       </MainContainer>
+      <Footer />
     </>
   );
 };

@@ -10,25 +10,27 @@
   - https://tailwindcss.com
 - DaisyUI
   - https://daisyui.com
+- React Type Animation
+  - https://react-type-animation.netlify.app/
 
 ## Tekniska krav
 
 ### Komponentstruktur och Dataflöde
 
-- Skapa återanvändbara komponenter för att strukturera din webbplats.
-- Använd props för att skicka data mellan komponenter för att säkerställa ett effektivt dataflöde.
+- DONE - Skapa återanvändbara komponenter för att strukturera din webbplats.
+- DONE - Använd props för att skicka data mellan komponenter för att säkerställa ett effektivt dataflöde.
 
 ### React Router
 
-- Implementera React Router för att hantera navigation mellan olika sektioner eller vyer. Du ska ha minst tre vyer, t ex: 'Om mig', 'Projekt' och 'Kontakt'.
+- DONE - Implementera React Router för att hantera navigation mellan olika sektioner eller vyer. Du ska ha minst tre vyer, t ex: 'Om mig', 'Projekt' och 'Kontakt'.
 
 ### Lokal statehantering
 
-- Använd useState-hooken för att hantera lokal state i minst en komponent i din webbapp. Till exempel kan du använda den för att skapa ett interaktivt kontaktformulär eller en annan interaktiv sektion.
+- DONE -Använd useState-hooken för att hantera lokal state i minst en komponent i din webbapp. Till exempel kan du använda den för att skapa ett interaktivt kontaktformulär eller en annan interaktiv sektion.
 
 ### Global statehantering
 
-- Använd ett externt bibliotek som Redux eller Zustand för global statehantering. Detta kan vara för att hantera användarpreferenser (som tema eller layout) eller för att lagra och hantera data som används av flera komponenter.
+- TODO -Använd ett externt bibliotek som Redux eller Zustand för global statehantering. Detta kan vara för att hantera användarpreferenser (som tema eller layout) eller för att lagra och hantera data som används av flera komponenter.
 
 ### Kodstandard och Dokumentation
 
@@ -37,7 +39,7 @@
 
 ### Interagera med ett API
 
-- Integrera ett externt API (till exempel GitHub API för att automatiskt visa dina senaste projekt på webbplatsen).
+- DONE - Integrera ett externt API (till exempel GitHub API för att automatiskt visa dina senaste projekt på webbplatsen).
 
 ## Bedömning
 
