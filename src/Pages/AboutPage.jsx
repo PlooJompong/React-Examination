@@ -15,9 +15,7 @@ const AboutPage = () => {
       <Navbar />
       <MainContainer>
         <section className="hero-content mb-60 flex-col items-start gap-6">
-          <h1 className="mb-8 font-fira text-lg 2xl:text-xl ">
-            Hi, my name is
-          </h1>
+          <h1 className="mb-8 font-fira text-lg 2xl:text-xl">Hi, my name is</h1>
           <h2 className="text-5xl font-semibold lg:text-7xl">Ploo Jompong</h2>
 
           {/*  TypeAnimation */}
@@ -32,7 +30,7 @@ const AboutPage = () => {
             speed={50}
             cursor={true}
             repeat={Infinity}
-            className="mb-8 text-xl lg:text-6xl "
+            className="mb-8 text-xl lg:text-6xl dark:text-bright-green "
           />
 
           <p className="mb-6 text-balance text-lg lg:text-xl">
@@ -53,14 +51,14 @@ const AboutPage = () => {
               <img
                 src={linkedin}
                 alt="linkedin logo"
-                className="size-10 rounded-md hover:bg-white hover:outline"
+                className="size-10 rounded-md hover:outline dark:bg-white "
               />
             </a>
             <a href="https://github.com/PlooJompong" target="_blank">
               <img
                 src={github}
                 alt="github logo"
-                className="size-10 rounded-md hover:bg-white hover:outline"
+                className="size-10 rounded-md  hover:outline dark:bg-white"
               />
             </a>
           </div>
