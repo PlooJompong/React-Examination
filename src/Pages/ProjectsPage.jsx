@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import MainContainer from '../components/MainContainer.jsx';
+import ScrollToTop from '../components/ScrollToTop.jsx';
 import Navbar from '../components/Navbar.jsx';
 import Card from '../components/Card.jsx';
 import Footer from '../components/Footer.jsx';
@@ -8,9 +9,9 @@ import Footer from '../components/Footer.jsx';
 // Array of Repos that I want to display
 const repoNamesToDisplay = [
   'Javascript-projects',
-  'Solaris-Examination-Ploo-Jompong',
-  'Frontend-Mentor-Challenges',
   'React-Examination',
+  'Frontend-Mentor-Challenges',
+  'Solaris-Examination-Ploo-Jompong',
   'ChessTimer',
   'WeatherApp',
 ];
@@ -66,9 +67,12 @@ const ProjectsPage = () => {
 
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <MainContainer>
-        <h1 className="text-center text-3xl">My Project</h1>
+        <h1 className="mb-6 mt-2 text-center text-4xl font-semibold">
+          My Projects
+        </h1>
         <Card repos={repos} />
       </MainContainer>
       <Footer />

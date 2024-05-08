@@ -6,9 +6,3 @@ html {
   scrollbar-width: thin;
   scrollbar-color: #334155 #fff;
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
