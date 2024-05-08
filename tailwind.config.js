@@ -5,8 +5,16 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'fira': ['Fira Mono', 'monospace'],
+        'inter': ['Inter', 'sans-serif']
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui')
+  ],
 }
+
 
