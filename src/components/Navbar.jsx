@@ -1,4 +1,4 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { toggleActions } from '../store/slices/themeSlice';
 import { Link } from 'react-router-dom';
 import reactLogo from '../assets/react.svg';
@@ -7,6 +7,7 @@ import Toggle from './Toggle';
 const Navbar = () => {
   // useDispatch is a hook that allows components to interact with the Redux store
   const dispatch = useDispatch();
+  const theme = useSelector((state) => state.theme.theme);
 
   // toggleTheme is a function that dispatches an action to toggle the theme
   const toggleTheme = () => {
@@ -107,7 +108,9 @@ const Navbar = () => {
         <Toggle onClick={toggleTheme} />
       </header>
       <div className="mx-auto mt-5 flex w-full max-w-screen-2xl items-center justify-center px-10">
-        <div className="h-px w-full bg-slate-200 dark:bg-bright-green"></div>
+        <div
+          className={`${theme ? 'bg-bright-green' : 'bg-bright-purple'} h-px w-full`}
+        ></div>
       </div>
     </>
   );

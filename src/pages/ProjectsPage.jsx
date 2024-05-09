@@ -1,10 +1,10 @@
-import axios from 'axios';
 import { useEffect, useState } from 'react';
-import MainContainer from '../components/MainContainer.jsx';
+import axios from 'axios';
 import ScrollToTop from '../components/ScrollToTop.jsx';
 import Navbar from '../components/Navbar.jsx';
-import Card from '../components/Card.jsx';
+import MainContainer from '../components/MainContainer.jsx';
 import Footer from '../components/Footer.jsx';
+import Card from '../components/Card.jsx';
 
 // Array of Repos that I want to display
 const repoNamesToDisplay = [

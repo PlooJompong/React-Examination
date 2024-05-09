@@ -14,13 +14,15 @@ export default {
         "navy": "#0a192f",
         "light-navy": "#112240",
         "light-slate": "#CCD6F6",
-        "bright-green": "#64ffda"
+        "bright-green": "#64ffda",
+        "bright-purple": "#767ffe"
       },
       textColor: {
         "navy": "#0a192f",
         "light-navy": "#112240",
         "light-slate": "#CCD6F6",
-        "bright-green": "#64ffda"
+        "bright-green": "#64ffda",
+        "bright-purple": "#767ffe"
       }
     },
   },

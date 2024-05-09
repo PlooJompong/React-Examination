@@ -1,17 +1,24 @@
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import MainContainer from '../components/MainContainer';
 import Footer from '../components/Footer';
+import Button from '../components/Button';
 
 const NotFoundPage = () => {
   return (
     <>
       <Navbar />
-      <h1>NotFoundPage</h1>
-      <Link to="/">
-        <button className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">
-          Back to About me
-        </button>
-      </Link>
+      <MainContainer>
+        <h2 className="text-bright-purple -translate-y-20 text-7xl font-semibold dark:text-bright-green lg:text-9xl">
+          404
+        </h2>
+        <h2 className="my-20 -translate-y-20 text-balance text-center font-fira text-3xl lg:text-5xl">
+          I don&apos;t know how you ended upp here, but you should go away now
+        </h2>
+        <Link to="/">
+          <Button size={'w-auto'}>Back to About</Button>
+        </Link>
+      </MainContainer>
       <Footer />
     </>
   );

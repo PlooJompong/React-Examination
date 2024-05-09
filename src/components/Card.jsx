@@ -15,6 +15,9 @@ const Card = ({ repos }) => {
   //  Get theme from store.js
   const theme = useSelector((state) => state.theme.theme);
 
+  // Use to generate number to use as image src for card
+  let randomImg = 11;
+
   return (
     <section className="flex flex-wrap items-start justify-around gap-5">
       {/* Loop through repos from ProjectsPage and display them */}
@@ -24,9 +27,10 @@ const Card = ({ repos }) => {
           className={`${theme} ${theme ? 'bg-light-navy text-light-slate' : 'bg-white'} card w-96 shadow-xl`}
         >
           <figure>
+            {/* Generate free picsum image */}
             <img
-              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-              alt="Shoes"
+              src={`https://picsum.photos/id/${randomImg++}/400/200`}
+              alt="img"
             />
           </figure>
           <div className="card-body">

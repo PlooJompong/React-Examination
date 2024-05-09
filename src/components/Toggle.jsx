@@ -1,4 +1,8 @@
+import { useSelector } from 'react-redux';
+
 const Toggle = ({ onClick }) => {
+  const theme = useSelector((state) => state.theme.theme);
+
   return (
     // Toggle theme button
     <label className="swap swap-rotate ml-10 mr-5 py-0 dark:text-light-slate">
@@ -8,6 +12,8 @@ const Toggle = ({ onClick }) => {
         id="theme-controller"
         name="theme-controller"
         value="synthwave"
+        // Make sure theme match with icon
+        defaultChecked={theme ? '' : 'dark'}
         onClick={onClick}
       />
 

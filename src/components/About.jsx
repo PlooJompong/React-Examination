@@ -27,7 +27,7 @@ const About = () => {
         speed={50}
         cursor={true}
         repeat={Infinity}
-        className="mb-8 text-4xl dark:text-bright-green lg:text-6xl "
+        className="text-bright-purple mb-8 text-4xl dark:text-bright-green lg:text-6xl"
       />
 
       <p className="mb-6 text-balance text-lg lg:text-xl">
