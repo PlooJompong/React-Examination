@@ -1,23 +1,28 @@
-import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleActions } from '../store/slices/themeSlice';
 import { Link } from 'react-router-dom';
 import reactLogo from '../assets/react.svg';
+import Toggle from './Toggle';
 
 const Navbar = () => {
-  const [theme, setTheme] = useState('dark');
+  const dispatch = useDispatch();
+  const theme = useSelector((state) => state.theme.theme);
 
   const toggleTheme = () => {
-    setTheme(theme === 'dark' ? '' : 'dark');
+    dispatch(toggleActions.toggleTheme());
   };
 
   return (
-    <header className={`${theme} ${theme ? 'bg-navy' : 'bg-white'} w-full`}>
-      <nav className=" navbar mx-auto max-w-screen-2xl font-semibold text-slate-700">
-        <div className="flex-1 gap-4 ">
+    <header
+      className={`${theme} ${theme ? 'bg-navy' : 'bg-white'} w-full pt-10`}
+    >
+      <nav className="navbar mx-auto max-w-screen-2xl font-semibold text-slate-700">
+        <div className=" mr-auto gap-4">
           <div className="dropdown">
             <div
               tabIndex={0}
               role="button"
-              className="btn btn-ghost lg:hidden dark:text-light-slate dark:hover:bg-light-slate dark:hover:text-light-navy"
+              className="btn btn-ghost md:hidden dark:text-light-slate dark:hover:bg-light-slate dark:hover:text-light-navy"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +41,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu dropdown-content menu-sm z-[1] mt-2 min-w-80 rounded-box py-3 shadow dark:bg-light-navy"
+              className="text-light-navy-700 menu dropdown-content menu-sm z-[1] mt-2 min-w-80 rounded-box bg-light-slate py-3 text-slate-700 shadow dark:bg-light-navy"
             >
               <li>
                 <Link
@@ -67,16 +72,13 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <Link
-            to="/"
-            // className="hover:rounded-md  hover:bg-slate-200 dark:hover:bg-slate-700"
-          >
+          <Link to="/">
             <img src={reactLogo} alt="React Logo" className="size-12" />
           </Link>
         </div>
 
-        <nav className="hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 text-xl dark:text-light-slate">
+        <nav className="hidden md:flex">
+          <ul className="menu menu-horizontal items-center justify-center px-1 py-0 text-xl dark:text-light-slate">
             <li>
               <Link
                 to="/"
@@ -103,11 +105,11 @@ const Navbar = () => {
             </li>
           </ul>
         </nav>
+        <Toggle onClick={toggleTheme} />
       </nav>
-      <div className="mx-auto flex w-full max-w-screen-2xl items-center justify-center px-10">
+      <div className="mx-auto mt-5 flex w-full max-w-screen-2xl items-center justify-center px-10">
         <div className="h-px w-full bg-slate-200 dark:bg-bright-green"></div>
       </div>
-      <button onClick={toggleTheme}>Test</button>
     </header>
   );
 };

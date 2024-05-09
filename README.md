@@ -30,7 +30,7 @@
 
 ### Global statehantering
 
-- TODO - Använd ett externt bibliotek som Redux eller Zustand för global statehantering. Detta kan vara för att hantera användarpreferenser (som tema eller layout) eller för att lagra och hantera data som används av flera komponenter.
+- DONE - Använd ett externt bibliotek som Redux eller Zustand för global statehantering. Detta kan vara för att hantera användarpreferenser (som tema eller layout) eller för att lagra och hantera data som används av flera komponenter.
 
 ### Kodstandard och Dokumentation
 
