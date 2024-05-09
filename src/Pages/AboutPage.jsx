@@ -1,14 +1,19 @@
 import { Link } from 'react-router-dom';
 import { TypeAnimation } from 'react-type-animation';
+import { useSelector } from 'react-redux';
 import ScrollToTop from '../components/ScrollToTop.jsx';
 import Navbar from '../components/Navbar.jsx';
 import MainContainer from '../components/MainContainer.jsx';
 import Footer from '../components/Footer.jsx';
 import Button from '../components/Button.jsx';
-import linkedin from '../assets/linkedin.svg';
-import github from '../assets/github.svg';
+import linkedinDark from '../assets/linkedin_dark.svg';
+import linkedinLight from '../assets/linkedin_light.svg';
+import githubDark from '../assets/github_dark.svg';
+import githubLight from '../assets/github_light.svg';
 
 const AboutPage = () => {
+  const theme = useSelector((state) => state.theme.theme);
+
   return (
     <>
       <ScrollToTop />
@@ -30,7 +35,7 @@ const AboutPage = () => {
             speed={50}
             cursor={true}
             repeat={Infinity}
-            className="mb-8 text-xl lg:text-6xl dark:text-bright-green "
+            className="mb-8 text-4xl lg:text-6xl dark:text-bright-green "
           />
 
           <p className="mb-6 text-balance text-lg lg:text-xl">
@@ -47,18 +52,19 @@ const AboutPage = () => {
             <a
               href="https://www.linkedin.com/in/ploo-jompong-8564bb187/"
               target="_blank"
+              className="bg-navy text-light-slate"
             >
               <img
-                src={linkedin}
+                src={theme === 'dark' ? linkedinDark : linkedinLight}
                 alt="linkedin logo"
-                className="size-10 rounded-md hover:outline dark:bg-white "
+                className="size-10"
               />
             </a>
             <a href="https://github.com/PlooJompong" target="_blank">
               <img
-                src={github}
+                src={theme === 'dark' ? githubDark : githubLight}
                 alt="github logo"
-                className="size-10 rounded-md  hover:outline dark:bg-white"
+                className="size-10"
               />
             </a>
           </div>

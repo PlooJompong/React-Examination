@@ -1,21 +1,18 @@
-import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import linkedin from '../assets/linkedin.svg';
-import github from '../assets/github.svg';
+import linkedinDark from '../assets/linkedin_dark.svg';
+import linkedinLight from '../assets/linkedin_light.svg';
+import githubDark from '../assets/github_dark.svg';
+import githubLight from '../assets/github_light.svg';
 
 const Footer = () => {
-  const [theme, setTheme] = useState('dark');
-
-  const toggleTheme = () => {
-    setTheme(theme === 'dark' ? '' : 'dark');
-  };
+  const theme = useSelector((state) => state.theme.theme);
 
   return (
     <footer className={`${theme} ${theme ? 'bg-navy' : 'bg-white'} w-full`}>
       <div
         className={`footer footer-center rounded px-10 pb-10 text-base text-slate-700 dark:text-light-slate`}
       >
-        <button onClick={toggleTheme}>Test</button>
         <div className="flex w-full max-w-screen-2xl items-center justify-center">
           <div className="h-px w-full bg-slate-200 dark:bg-bright-green"></div>
         </div>
@@ -37,16 +34,16 @@ const Footer = () => {
               target="_blank"
             >
               <img
-                src={linkedin}
+                src={theme === 'dark' ? linkedinDark : linkedinLight}
                 alt="linkedin logo"
-                className="size-10 rounded-md hover:bg-white hover:outline"
+                className="size-10"
               />
             </a>
             <a href="https://github.com/PlooJompong" target="_blank">
               <img
-                src={github}
+                src={theme === 'dark' ? githubDark : githubLight}
                 alt="github logo"
-                className="size-10 rounded-md hover:bg-white hover:outline"
+                className="size-10"
               />
             </a>
           </div>
