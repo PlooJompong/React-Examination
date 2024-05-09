@@ -1,4 +1,4 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { toggleActions } from '../store/slices/themeSlice';
 import { Link } from 'react-router-dom';
 import reactLogo from '../assets/react.svg';
@@ -6,23 +6,20 @@ import Toggle from './Toggle';
 
 const Navbar = () => {
   const dispatch = useDispatch();
-  const theme = useSelector((state) => state.theme.theme);
 
   const toggleTheme = () => {
     dispatch(toggleActions.toggleTheme());
   };
 
   return (
-    <header
-      className={`${theme} ${theme ? 'bg-navy' : 'bg-white'} w-full pt-10`}
-    >
-      <nav className="navbar mx-auto max-w-screen-2xl font-semibold text-slate-700">
-        <div className=" mr-auto gap-4">
+    <>
+      <header className="navbar mx-auto max-w-screen-2xl pt-8 font-fira">
+        <div className="mr-auto gap-4">
           <div className="dropdown">
             <div
               tabIndex={0}
               role="button"
-              className="btn btn-ghost md:hidden dark:text-light-slate dark:hover:bg-light-slate dark:hover:text-light-navy"
+              className="btn btn-ghost dark:hover:bg-light-slate dark:hover:text-light-navy md:hidden"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +38,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="text-light-navy-700 menu dropdown-content menu-sm z-[1] mt-2 min-w-80 rounded-box bg-light-slate py-3 text-slate-700 shadow dark:bg-light-navy"
+              className="menu dropdown-content menu-sm z-[1] mt-2 min-w-80 rounded-box bg-light-slate py-3 text-slate-700 shadow dark:bg-light-navy"
             >
               <li>
                 <Link
@@ -78,7 +75,7 @@ const Navbar = () => {
         </div>
 
         <nav className="hidden md:flex">
-          <ul className="menu menu-horizontal items-center justify-center px-1 py-0 text-xl dark:text-light-slate">
+          <ul className="menu menu-horizontal items-center justify-center px-1 py-0 text-xl">
             <li>
               <Link
                 to="/"
@@ -106,11 +103,11 @@ const Navbar = () => {
           </ul>
         </nav>
         <Toggle onClick={toggleTheme} />
-      </nav>
+      </header>
       <div className="mx-auto mt-5 flex w-full max-w-screen-2xl items-center justify-center px-10">
         <div className="h-px w-full bg-slate-200 dark:bg-bright-green"></div>
       </div>
-    </header>
+    </>
   );
 };
 

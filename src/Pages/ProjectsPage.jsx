@@ -67,6 +67,7 @@ const ProjectsPage = () => {
 
   return (
     <>
+      {/* Scroll to top on route change */}
       <ScrollToTop />
       <Navbar />
       <MainContainer>

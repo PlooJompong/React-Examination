@@ -1,9 +1,12 @@
 const Toggle = ({ onClick }) => {
   return (
+    // Toggle theme button
     <label className="swap swap-rotate ml-10 mr-5 py-0 dark:text-light-slate">
       <input
         type="checkbox"
         className="theme-controller"
+        id="theme-controller"
+        name="theme-controller"
         value="synthwave"
         onClick={onClick}
       />
