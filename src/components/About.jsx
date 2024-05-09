@@ -7,6 +7,7 @@ import linkedinLight from '../assets/linkedin_light.svg';
 import githubDark from '../assets/github_dark.svg';
 import githubLight from '../assets/github_light.svg';
 const About = () => {
+  //  Get theme from store.js
   const theme = useSelector((state) => state.theme.theme);
 
   return (
@@ -36,6 +37,7 @@ const About = () => {
         to mastering both frontend and backend development to create innovative
         solutions.
       </p>
+
       <div className="flex items-center justify-center gap-6">
         <Link to="/projects">
           <Button size={'w-auto'}>My projects</Button>

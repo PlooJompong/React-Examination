@@ -1,54 +1,38 @@
-# React Examination
+# Introduction
 
-- Redux Toolkit
-  - https://redux-toolkit.js.org
-- React Router
-  - https://reactrouter.com
-- Axios
-  - https://axios-http.com
-- Tailwind
-  - https://tailwindcss.com
-- DaisyUI
-  - https://daisyui.com
-- React Type Animation
-  - https://react-type-animation.netlify.app/
+This is a simple SPA portfolio built in [React](https://reactjs.org/). In this project, I have learned the basics of how to use [Redux Toolkit](https://redux-toolkit.js.org), [React Router](https://reactrouter.com), [Axios](https://axios-http.com), [Tailwind](https://tailwindcss.com), [DaisyUI](https://daisyui.com), and [React Type Animation](https://react-type-animation.netlify.app/).
 
-## Tekniska krav
+### Installation
 
-### Komponentstruktur och Dataflöde
+Make sure you have [Node.js](https://nodejs.org/en/) and [NPM](https://www.npmjs.com/) installed:
+Check if Node.js and NPM are installed by running `node -v` and `npm -v` in your terminal.
 
-- DONE - Skapa återanvändbara komponenter för att strukturera din webbplats.
-- DONE - Använd props för att skicka data mellan komponenter för att säkerställa ett effektivt dataflöde.
+1. Clone this repository to your local machine
+2. Navigate to the repository in the terminal
+3. Install dependencies by running `npm install` in the terminal
+4. Start the development server by running `npm run dev` in the terminal
+5. Open http://localhost:3000 in your browser
 
-### React Router
+### Contents
 
-- DONE - Implementera React Router för att hantera navigation mellan olika sektioner eller vyer. Du ska ha minst tre vyer, t ex: 'Om mig', 'Projekt' och 'Kontakt'.
+- AboutPage
+  - A short description of who I am and my goals
+- ProjectsPage
+  - List of projects I have done fetched from my GitHub
+- ContactPage
+  - Dummy contact form without any functionality
 
-### Lokal statehantering
+### External Libraries
 
-- DONE - Använd useState-hooken för att hantera lokal state i minst en komponent i din webbapp. Till exempel kan du använda den för att skapa ett interaktivt kontaktformulär eller en annan interaktiv sektion.
-
-### Global statehantering
-
-- DONE - Använd ett externt bibliotek som Redux eller Zustand för global statehantering. Detta kan vara för att hantera användarpreferenser (som tema eller layout) eller för att lagra och hantera data som används av flera komponenter.
-
-### Kodstandard och Dokumentation
-
-- TODO - Skriv ren och välorganiserad kod. Kommentera koden där det är nödvändigt för att förklara komplexa eller viktiga delar.
-- TODO - Inkludera en README-fil som beskriver projektet, hur man kör det och en översikt av dess funktioner.
-
-### Interagera med ett API
-
-- DONE - Integrera ett externt API (till exempel GitHub API för att automatiskt visa dina senaste projekt på webbplatsen).
-
-## Bedömning
-
-### För Godkänt
-
-- Inlämnad länk till ditt GitHub repo med kod till en fungerande webbapplikation som uppfyller de tekniska kraven ovan.
-
-### För Väl Godkänt
-
-- Uppgiften uppfyller kraven för godkänt.
-- DONE - Du skall välja ut 2 stycken React Hooks alt. 2 externa bibliotek/paket (eller en av varje) som vi inte gått igenom under kursen som du läser på om och implementerar i din applikation. Utöver detta så beskriver du kortfattat i din README.md-fil hur dessa hooks/bibliotek fungerar samt varför du tycker att de passar just din applikation.
-- DONE - Du ska ha en god struktur på din applikation med uppdelning i Pages och Komponenter.
+- [Redux Toolkit](https://redux-toolkit.js.org)
+  - An opinionated toolkit for building applications with Redux.
+- [React Router](https://reactrouter.com)
+  - Complete routing library for React.
+- [Axios](https://axios-http.com)
+  - A library for making HTTP requests in JavaScript.
+- [Tailwind](https://tailwindcss.com)
+  - An popular utility-first CSS framework.
+- [DaisyUI](https://daisyui.com)
+  - A lightweight, extensible, and ready-to-use UI library plugin for [Tailwind](https://tailwindcss.com).
+- [React Type Animation](https://react-type-animation.netlify.app/)
+  - Easy to use library for displaying text as an animated type effect.

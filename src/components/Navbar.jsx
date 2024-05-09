@@ -5,8 +5,10 @@ import reactLogo from '../assets/react.svg';
 import Toggle from './Toggle';
 
 const Navbar = () => {
+  // useDispatch is a hook that allows components to interact with the Redux store
   const dispatch = useDispatch();
 
+  // toggleTheme is a function that dispatches an action to toggle the theme
   const toggleTheme = () => {
     dispatch(toggleActions.toggleTheme());
   };

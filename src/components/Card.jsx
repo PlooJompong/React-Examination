@@ -1,21 +1,23 @@
 import { useSelector } from 'react-redux';
 import Button from './Button';
 
-// Fixed the title to match the order of repoNamesToDisplay in the ProjectsPage
+// Fixed titles to match the order of repoNamesToDisplay in the ProjectsPage
 const renameTitle = [
   'Javascript Projects',
   'Resume in React',
   'Frontend Mentor Challenges',
-  'Solaris Javascript',
-  'ChessTimer',
-  'WeatherApp',
+  'Solaris',
+  'Chess Timer',
+  'Weather App',
 ];
 
 const Card = ({ repos }) => {
+  //  Get theme from store.js
   const theme = useSelector((state) => state.theme.theme);
 
   return (
     <section className="flex flex-wrap items-start justify-around gap-5">
+      {/* Loop through repos from ProjectsPage and display them */}
       {repos.map((repo, index) => (
         <div
           key={repo.id}
@@ -31,7 +33,7 @@ const Card = ({ repos }) => {
             {/* Rename title of repo */}
             <h2 className="card-title">{renameTitle[index]}</h2>
             <p>{repo.description}</p>
-            <Button size={'w-20'}>
+            <Button>
               <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
                 CODE
               </a>

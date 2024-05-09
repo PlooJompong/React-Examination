@@ -6,6 +6,7 @@ import githubDark from '../assets/github_dark.svg';
 import githubLight from '../assets/github_light.svg';
 
 const Footer = () => {
+  //  Get theme from store.js
   const theme = useSelector((state) => state.theme.theme);
 
   return (
@@ -24,6 +25,7 @@ const Footer = () => {
           Contact
         </Link>
       </nav>
+
       <nav>
         <div className="grid grid-flow-col gap-4">
           <a

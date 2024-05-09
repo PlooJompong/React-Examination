@@ -19,8 +19,12 @@ const repoNamesToDisplay = [
 const ProjectsPage = () => {
   const [repos, setRepos] = useState([]);
 
+  /**
+   * useEffect hook to fetch data from GitHub API and store in local storage
+   * Only run when component mounts (first render)
+   */
   useEffect(() => {
-    // Check if repos are in local storage
+    // Check if repos are exist in local storage
     if (localStorage.getItem('repos')) {
       const localData = JSON.parse(localStorage.getItem('repos'));
 
@@ -37,7 +41,10 @@ const ProjectsPage = () => {
       // Set repos to sortedRepos to display
       setRepos(sortedRepos);
     } else {
-      // Use Axios to fetch repos
+      /**
+       * If repos not exist in local storage, fetch data from GitHub API
+       * using axios and store in local storage
+       */
       axios
         .get('https://api.github.com/users/PlooJompong/repos')
         .then((res) => {
@@ -67,8 +74,7 @@ const ProjectsPage = () => {
 
   return (
     <>
-      {/* Scroll to top on route change */}
-      <ScrollToTop />
+      <ScrollToTop /> {/* Scroll to top on route change */}
       <Navbar />
       <MainContainer>
         <h1 className="mb-6 mt-2 text-center text-4xl font-semibold">
