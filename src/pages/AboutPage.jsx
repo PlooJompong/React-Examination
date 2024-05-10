@@ -7,7 +7,8 @@ import About from '../components/About.jsx';
 const AboutPage = () => {
   return (
     <>
-      <ScrollToTop /> {/* Scroll to top on route change */}
+      {/* Scroll to top on route change */}
+      <ScrollToTop />
       <Navbar />
       <MainContainer>
         <About />

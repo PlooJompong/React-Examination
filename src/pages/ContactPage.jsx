@@ -7,7 +7,8 @@ import FormInput from '../components/Form.jsx';
 const ContactPage = () => {
   return (
     <>
-      <ScrollToTop /> {/* Scroll to top on route change */}
+      {/* Scroll to top on route change */}
+      <ScrollToTop />
       <Navbar />
       <MainContainer>
         <h1 className="mb-6 mt-2 text-center text-4xl font-semibold">

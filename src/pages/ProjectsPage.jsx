@@ -18,6 +18,8 @@ const repoNamesToDisplay = [
 
 const ProjectsPage = () => {
   const [repos, setRepos] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   /**
    * useEffect hook to fetch data from GitHub API and store in local storage
@@ -40,6 +42,7 @@ const ProjectsPage = () => {
 
       // Set repos to sortedRepos to display
       setRepos(sortedRepos);
+      setLoading(false);
     } else {
       /**
        * If repos not exist in local storage, fetch data from GitHub API
@@ -65,22 +68,41 @@ const ProjectsPage = () => {
 
           // Set repos to sortedRepos to display
           setRepos(sortedRepos);
+          setLoading(false);
         })
         .catch((error) => {
-          console.log('Error fetching repos', error);
+          setError(error);
+          setLoading(false);
         });
     }
   }, []);
 
   return (
     <>
-      <ScrollToTop /> {/* Scroll to top on route change */}
+      {/* Scroll to top on route change */}
+      <ScrollToTop />
       <Navbar />
       <MainContainer>
-        <h1 className="mb-6 mt-2 text-center text-4xl font-semibold">
-          My Projects
-        </h1>
-        <Card repos={repos} />
+        {/* Display h1 if fetch success or null if error  */}
+        {loading ? null : (
+          <h1 className="mb-6 mt-2 text-center text-4xl font-semibold">
+            My Projects
+          </h1>
+        )}
+        {/**
+         * Display loading spinner while fetching data or
+         * display error message if fetch error or
+         * display <Card /> if fetch success
+         * */}
+        {loading ? (
+          <span className="loading loading-spinner loading-lg"></span>
+        ) : error ? (
+          <h2 className="mb-40 text-4xl text-bright-purple dark:text-bright-green lg:text-6xl">
+            {error.message}
+          </h2>
+        ) : (
+          <Card repos={repos} />
+        )}
       </MainContainer>
       <Footer />
     </>

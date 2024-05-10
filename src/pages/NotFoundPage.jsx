@@ -9,7 +9,7 @@ const NotFoundPage = () => {
     <>
       <Navbar />
       <MainContainer>
-        <h2 className="text-bright-purple -translate-y-20 text-7xl font-semibold dark:text-bright-green lg:text-9xl">
+        <h2 className="-translate-y-20 text-7xl font-semibold text-bright-purple dark:text-bright-green lg:text-9xl">
           404
         </h2>
         <h2 className="my-20 -translate-y-20 text-balance text-center font-fira text-3xl lg:text-5xl">
